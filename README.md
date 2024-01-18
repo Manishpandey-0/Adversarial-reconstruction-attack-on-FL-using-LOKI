@@ -13,9 +13,7 @@ Accepted to IEEE Symposium Security & Privacy, 2024
 ```
 
 Below is an algorithmic description of the code:
-- Import Libraries:
-  - Nested Item # indented 2 spaces
-* Item Alt      # alternate bullet syntax
+
 - Import Libraries:
   - Import necessary libraries, including NumPy, PIL, Matplotlib, PyTorch, torchvision, and torchmetrics.
   - Set the device to "cuda" if available; otherwise, use "cpu".
@@ -32,47 +30,31 @@ Below is an algorithmic description of the code:
 - Define Imprint Layer:
   - Implement a custom neural network layer (imprintLayer) consisting of a convolutional layer and two fully connected layers.
   - The layer is designed for imprinting custom convolutional parameters and reconstructing data.
+- Define Helper Functions:
+  - Implement a function (get_bins) to compute bins for imprinting layer bias.
+  - Set up parameters such as batch size, number of clients, and convolutional sizes.
+- Generate Client Data:
+  - Randomly select a batch of images for each client from the dataset.
+  - Create one-hot labels for the selected images.
 
--Define Helper Functions:
-  -Implement a function (get_bins) to compute bins for imprinting layer bias.
-  -Set up parameters such as batch size, number of clients, and convolutional sizes.
+- Run the Attack:
+  - Initialize parameters like the number of bins, convolutional scaling factor, and the number of epochs.
+  - Iterate over clients:
+    - Initialize an imprint layer and a model (either ResNet or a single imprint layer).
+    - Perform local training iterations with a custom loss function.
+    - Track activations and gradients for reconstructed data points.
+    - Evaluate image quality metrics (PSNR, SSIM, LPIPS) if enabled.
+    - Summarize leakage statistics.
+- Display Results:
+  - Print the number of clients, total number of images, total leaked images, and leakage rate.
+  - Print average metrics if enabled.
 
--Generate Client Data:
-  -Randomly select a batch of images for each client from the dataset.
-  -Create one-hot labels for the selected images.
+- Visualize Reconstructions:
+  - Plot reconstructed images for a specific client.
+  - Display ground truth images for comparison.
 
--Run the Attack:
-  -Initialize parameters like the number of bins, convolutional scaling factor, and the number of epochs.
-  -Iterate over clients:
-    -Initialize an imprint layer and a model (either ResNet or a single imprint layer).
-    -Perform local training iterations with a custom loss function.
-    -Track activations and gradients for reconstructed data points.
-    -Evaluate image quality metrics (PSNR, SSIM, LPIPS) if enabled.
-    -Summarize leakage statistics.
-
--Display Results:
-  -Print the number of clients, total number of images, total leaked images, and leakage rate.
-  -Print average metrics if enabled.
-
--Visualize Reconstructions:
-  -Plot reconstructed images for a specific client.
-  -Display ground truth images for comparison.
- Markup : * Bullet list
-              * Nested bullet
-                  * Sub-nested bullet etc
-          * Bullet list item 2
-
--OR-
-
- Markup : - Bullet list
-              - Nested bullet
-                  - Sub-nested bullet etc
-          - Bullet list item 2 
-- Item Zed
-  - Nested Item # indented 2 spaces
-* Item Alt      # alternate bullet syntax
 ### Note:
 
--The code generates a synthetic federated learning environment and simulates the LOKI attack to reveal sensitive information across multiple clients.
--It leverages a custom imprint layer and computes various metrics to evaluate the success of the attack.
--Visualization outputs include histograms, leakage statistics, and reconstructed images for analysis.
+- The code generates a synthetic federated learning environment and simulates the LOKI attack to reveal sensitive information across multiple clients.
+- It leverages a custom imprint layer and computes various metrics to evaluate the success of the attack.
+- Visualization outputs include histograms, leakage statistics, and reconstructed images for analysis.
