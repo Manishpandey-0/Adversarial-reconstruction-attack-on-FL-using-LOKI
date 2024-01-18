@@ -61,8 +61,19 @@ Below is an algorithmic description of the code:
 -Visualize Reconstructions:
   -Plot reconstructed images for a specific client.
   -Display ground truth images for comparison.
+ Markup : * Bullet list
+              * Nested bullet
+                  * Sub-nested bullet etc
+          * Bullet list item 2
 
-###Note:
+-OR-
+
+ Markup : - Bullet list
+              - Nested bullet
+                  - Sub-nested bullet etc
+          - Bullet list item 2 
+
+### Note:
 
 -The code generates a synthetic federated learning environment and simulates the LOKI attack to reveal sensitive information across multiple clients.
 -It leverages a custom imprint layer and computes various metrics to evaluate the success of the attack.
