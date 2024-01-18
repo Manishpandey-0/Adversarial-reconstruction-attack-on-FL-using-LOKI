@@ -72,7 +72,9 @@ Below is an algorithmic description of the code:
               - Nested bullet
                   - Sub-nested bullet etc
           - Bullet list item 2 
-
+- Item Zed
+  - Nested Item # indented 2 spaces
+* Item Alt      # alternate bullet syntax
 ### Note:
 
 -The code generates a synthetic federated learning environment and simulates the LOKI attack to reveal sensitive information across multiple clients.
