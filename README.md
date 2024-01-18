@@ -50,14 +50,18 @@ Accepted to IEEE Symposium Security & Privacy, 2024
 - Display Results:
   - Print the number of clients, total number of images, total leaked images, and leakage rate.
   - Print average metrics if enabled.
+
   
   ![Screenshot (180)](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/66a92fed-73b0-45c4-8f67-7a3ed565b2c6)
 
 - Visualize Reconstructions:
   - Plot reconstructed images for a specific client.
-    - ![reconstructions](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/6835c132-ea1a-43c0-a0d5-8580b62b78bb)
+  
+   ![reconstructions](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/6835c132-ea1a-43c0-a0d5-8580b62b78bb)
+
   - Display ground truth images for comparison.
-    - ![ground_truth](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/09f9956e-9a73-4bd1-8dc0-263a7b26b176)
+  
+  ![ground_truth](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/09f9956e-9a73-4bd1-8dc0-263a7b26b176)
 
 
 ### Note:
