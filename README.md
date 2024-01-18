@@ -13,29 +13,25 @@ Accepted to IEEE Symposium Security & Privacy, 2024
 ```
 
 Below is an algorithmic description of the code:
-
--Import Libraries:
-
-    -Import necessary libraries, including NumPy, PIL, Matplotlib, PyTorch, torchvision, and torchmetrics.
-
-    -Set the device to "cuda" if available; otherwise, use "cpu".
-
--Load Dataset:
-  -Choose the dataset (mnist or cifar) and set relevant parameters.
-  -Define transformations for preprocessing the images.
-
--Utility Functions:
-  -Define functions for converting labels to one-hot encoding.
-  -Implement a function (norm_image) for normalizing image pixel values.
-  -Define a function (psnr) for calculating the Peak Signal-to-Noise Ratio.
-
--Compute Average Pixel Intensity Distribution:
-  -Load the dataset and compute the average pixel intensity distribution of images.
-  -Visualize the distribution using a histogram.
-
--Define Imprint Layer:
-  -Implement a custom neural network layer (imprintLayer) consisting of a convolutional layer and two fully connected layers.
-  -The layer is designed for imprinting custom convolutional parameters and reconstructing data.
+- Import Libraries:
+  - Nested Item # indented 2 spaces
+* Item Alt      # alternate bullet syntax
+- Import Libraries:
+  - Import necessary libraries, including NumPy, PIL, Matplotlib, PyTorch, torchvision, and torchmetrics.
+  - Set the device to "cuda" if available; otherwise, use "cpu".
+- Load Dataset:
+  - Choose the dataset (mnist or cifar) and set relevant parameters.
+  - Define transformations for preprocessing the images.
+- Utility Functions:
+  - Define functions for converting labels to one-hot encoding.
+  - Implement a function (norm_image) for normalizing image pixel values.
+  - Define a function (psnr) for calculating the Peak Signal-to-Noise Ratio.
+- Compute Average Pixel Intensity Distribution:
+  - Load the dataset and compute the average pixel intensity distribution of images.
+  - Visualize the distribution using a histogram.
+- Define Imprint Layer:
+  - Implement a custom neural network layer (imprintLayer) consisting of a convolutional layer and two fully connected layers.
+  - The layer is designed for imprinting custom convolutional parameters and reconstructing data.
 
 -Define Helper Functions:
   -Implement a function (get_bins) to compute bins for imprinting layer bias.
