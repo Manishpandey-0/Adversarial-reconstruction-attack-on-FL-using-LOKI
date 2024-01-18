@@ -26,9 +26,13 @@ Accepted to IEEE Symposium Security & Privacy, 2024
   - Define a function (psnr) for calculating the Peak Signal-to-Noise Ratio.
 - Compute Average Pixel Intensity Distribution:
   - Load the dataset and compute the average pixel intensity distribution of images.
-    - ![ciafr_ave_pixel_intensity_dist](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/f15ea54b-38f4-4e22-93d1-f389b4545826)
+
+    ![ciafr_ave_pixel_intensity_dist](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/f15ea54b-38f4-4e22-93d1-f389b4545826)
+
   - Visualize the distribution using a histogram.
-    - ![all_client_image_distribution](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/ad34a585-50cd-4dc5-9b78-cbfbba026f25)
+  
+  ![all_client_image_distribution](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/ad34a585-50cd-4dc5-9b78-cbfbba026f25)
+
 - Define Imprint Layer:
   - Implement a custom neural network layer (imprintLayer) consisting of a convolutional layer and two fully connected layers.
   - The layer is designed for imprinting custom convolutional parameters and reconstructing data.
