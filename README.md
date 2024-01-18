@@ -26,7 +26,9 @@ Below is an algorithmic description of the code:
   - Define a function (psnr) for calculating the Peak Signal-to-Noise Ratio.
 - Compute Average Pixel Intensity Distribution:
   - Load the dataset and compute the average pixel intensity distribution of images.
+    - ![ciafr_ave_pixel_intensity_dist](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/f15ea54b-38f4-4e22-93d1-f389b4545826)
   - Visualize the distribution using a histogram.
+    - ![all_client_image_distribution](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/ad34a585-50cd-4dc5-9b78-cbfbba026f25)
 - Define Imprint Layer:
   - Implement a custom neural network layer (imprintLayer) consisting of a convolutional layer and two fully connected layers.
   - The layer is designed for imprinting custom convolutional parameters and reconstructing data.
@@ -51,7 +53,10 @@ Below is an algorithmic description of the code:
 
 - Visualize Reconstructions:
   - Plot reconstructed images for a specific client.
+    - ![reconstructions](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/6835c132-ea1a-43c0-a0d5-8580b62b78bb)
   - Display ground truth images for comparison.
+    - ![ground_truth](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/09f9956e-9a73-4bd1-8dc0-263a7b26b176)
+
 
 ### Note:
 
