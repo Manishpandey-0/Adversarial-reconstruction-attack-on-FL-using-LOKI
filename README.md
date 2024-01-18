@@ -31,7 +31,7 @@ Accepted to IEEE Symposium Security & Privacy, 2024
 
   - Visualize the distribution using a histogram.
   
-  ![all_client_image_distribution](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/ad34a585-50cd-4dc5-9b78-cbfbba026f25)
+    ![all_client_image_distribution](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/ad34a585-50cd-4dc5-9b78-cbfbba026f25)
 
 - Define Imprint Layer:
   - Implement a custom neural network layer (imprintLayer) consisting of a convolutional layer and two fully connected layers.
@@ -56,7 +56,7 @@ Accepted to IEEE Symposium Security & Privacy, 2024
   - Print average metrics if enabled.
 
   
-  ![Screenshot (180)](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/66a92fed-73b0-45c4-8f67-7a3ed565b2c6)
+![Screenshot (180)](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/66a92fed-73b0-45c4-8f67-7a3ed565b2c6)
 
 - Visualize Reconstructions:
   - Plot reconstructed images for a specific client.
@@ -65,7 +65,7 @@ Accepted to IEEE Symposium Security & Privacy, 2024
 
   - Display ground truth images for comparison.
   
-  ![ground_truth](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/09f9956e-9a73-4bd1-8dc0-263a7b26b176)
+   ![ground_truth](https://github.com/Manishpandey-0/Adversarial-reconstruction-attack-on-FL-using-LOKI/assets/65527099/09f9956e-9a73-4bd1-8dc0-263a7b26b176)
 
 
 ### Note:
