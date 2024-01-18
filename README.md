@@ -12,9 +12,58 @@ Accepted to IEEE Symposium Security & Privacy, 2024
 
 ```
 
-### Abstract: 
-Federated learning was introduced to enable machine learning over large decentralized datasets while promising privacy by eliminating the need for data sharing. Despite this, prior work has shown that shared gradients often contain private information and attackers can gain knowledge either through malicious modification of the architecture and parameters or by using optimization to approximate user data from the shared gradients. 
+Below is an algorithmic description of the code:
 
-However, prior data reconstruction attacks have been limited in setting and scale, as most works target FedSGD and limit the attack to single-client gradients. Many of these attacks fail in the more practical setting of FedAVG or if updates are aggregated together using secure aggregation. Data reconstruction becomes significantly more difficult, resulting in limited attack scale and/or decreased reconstruction quality. When both FedAVG and secure aggregation are used, there is no current method that is able to attack multiple clients concurrently in a federated learning setting.
+-Import Libraries:
 
-In this work we introduce LOKI, an attack that overcomes previous limitations and also breaks the anonymity of aggregation as the leaked data is identifiable and directly tied back to the clients they come from. Our design sends clients customized convolutional parameters, and the weight gradients of data points between clients remain separate even through aggregation. With FedAVG and aggregation across 100 clients, prior work can leak less than 1% of images on MNIST, CIFAR-100, and Tiny ImageNet. Using only a single training round, LOKI is able to leak 76-86% of all data samples.
+    -Import necessary libraries, including NumPy, PIL, Matplotlib, PyTorch, torchvision, and torchmetrics.
+
+    -Set the device to "cuda" if available; otherwise, use "cpu".
+
+-Load Dataset:
+  -Choose the dataset (mnist or cifar) and set relevant parameters.
+  -Define transformations for preprocessing the images.
+
+-Utility Functions:
+  -Define functions for converting labels to one-hot encoding.
+  -Implement a function (norm_image) for normalizing image pixel values.
+  -Define a function (psnr) for calculating the Peak Signal-to-Noise Ratio.
+
+-Compute Average Pixel Intensity Distribution:
+  -Load the dataset and compute the average pixel intensity distribution of images.
+  -Visualize the distribution using a histogram.
+
+-Define Imprint Layer:
+  -Implement a custom neural network layer (imprintLayer) consisting of a convolutional layer and two fully connected layers.
+  -The layer is designed for imprinting custom convolutional parameters and reconstructing data.
+
+-Define Helper Functions:
+  -Implement a function (get_bins) to compute bins for imprinting layer bias.
+  -Set up parameters such as batch size, number of clients, and convolutional sizes.
+
+-Generate Client Data:
+  -Randomly select a batch of images for each client from the dataset.
+  -Create one-hot labels for the selected images.
+
+-Run the Attack:
+  -Initialize parameters like the number of bins, convolutional scaling factor, and the number of epochs.
+  -Iterate over clients:
+    -Initialize an imprint layer and a model (either ResNet or a single imprint layer).
+    -Perform local training iterations with a custom loss function.
+    -Track activations and gradients for reconstructed data points.
+    -Evaluate image quality metrics (PSNR, SSIM, LPIPS) if enabled.
+    -Summarize leakage statistics.
+
+-Display Results:
+  -Print the number of clients, total number of images, total leaked images, and leakage rate.
+  -Print average metrics if enabled.
+
+-Visualize Reconstructions:
+  -Plot reconstructed images for a specific client.
+  -Display ground truth images for comparison.
+
+###Note:
+
+-The code generates a synthetic federated learning environment and simulates the LOKI attack to reveal sensitive information across multiple clients.
+-It leverages a custom imprint layer and computes various metrics to evaluate the success of the attack.
+-Visualization outputs include histograms, leakage statistics, and reconstructed images for analysis.
